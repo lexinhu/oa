@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="09e3102c-db8e-4db0-92aa-1613ae3ad185" name="Default Changelist" comment="" />
+    <list default="true" id="09e3102c-db8e-4db0-92aa-1613ae3ad185" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/oa_dao/target/" />
@@ -38,8 +40,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="211">
-              <caret line="15" column="18" selection-start-line="15" selection-start-column="18" selection-end-line="15" selection-end-column="18" />
+            <state relative-caret-position="239">
+              <caret line="19" column="44" lean-forward="true" selection-start-line="19" selection-start-column="44" selection-end-line="19" selection-end-column="44" />
             </state>
           </provider>
           <provider editor-type-id="MavenHelperPluginDependencyAnalyzer" />
@@ -95,10 +97,10 @@
         <option value="$PROJECT_DIR$/oa_web/pom.xml" />
         <option value="$PROJECT_DIR$/oa_dao/src/main/java/com/xn2001/oa/entity/w.java" />
         <option value="$PROJECT_DIR$/oa_dao/pom.xml" />
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/oa_dao/src/main/resources/spring-dao.xml" />
         <option value="$PROJECT_DIR$/oa_biz/pom.xml" />
         <option value="$PROJECT_DIR$/oa_biz/src/main/resources/spring-biz.xml" />
+        <option value="$PROJECT_DIR$/pom.xml" />
       </list>
     </option>
   </component>
@@ -164,6 +166,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="ChangesTree.GroupingKeys" value="module&#10;directory" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
@@ -199,7 +202,7 @@
       <updated>1581904526605</updated>
       <workItem from="1581904530965" duration="2195000" />
       <workItem from="1581912225258" duration="3502000" />
-      <workItem from="1581961107774" duration="7434000" />
+      <workItem from="1581961107774" duration="7996000" />
     </task>
     <task id="LOCAL-00001" summary="OA企业报销项目环境搭建">
       <created>1582029666523</created>
@@ -208,14 +211,21 @@
       <option name="project" value="LOCAL" />
       <updated>1582029666523</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="修改安全性高的mvc版本号">
+      <created>1582030361075</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1582030361075</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="13131000" />
+    <option name="totallyTimeSpent" value="13693000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="7" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25670242" />
@@ -259,7 +269,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="OA企业报销项目环境搭建" />
-    <option name="LAST_COMMIT_MESSAGE" value="OA企业报销项目环境搭建" />
+    <MESSAGE value="修改安全性高的mvc版本号" />
+    <option name="LAST_COMMIT_MESSAGE" value="修改安全性高的mvc版本号" />
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
@@ -323,8 +334,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="211">
-          <caret line="15" column="18" selection-start-line="15" selection-start-column="18" selection-end-line="15" selection-end-column="18" />
+        <state relative-caret-position="239">
+          <caret line="19" column="44" lean-forward="true" selection-start-line="19" selection-start-column="44" selection-end-line="19" selection-end-column="44" />
         </state>
       </provider>
       <provider editor-type-id="MavenHelperPluginDependencyAnalyzer" />
