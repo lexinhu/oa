@@ -7,6 +7,7 @@ import java.util.List;
  * Created by 乐心湖 on 2020/2/19 2:30
  */
 public class Contant {
+
     //职务
     public static final String POST_STAFF = "员工";
     public static final String POST_FM = "部门经理";
@@ -21,7 +22,6 @@ public class Contant {
         list.add(POST_TREASURER);
         return list;
     }
-
 
     /**
      *  费用类别
@@ -55,6 +55,5 @@ public class Contant {
     public static final String DEAL_REJECT="拒绝";
     public static final String DEAL_PASS="通过";
     public static final String DEAL_PAID="支付";
-
 
 }
