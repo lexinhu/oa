@@ -16,7 +16,6 @@ public class Department {
     
     private String address;
 
-    
     public String getSn() {
         return sn;
     }
