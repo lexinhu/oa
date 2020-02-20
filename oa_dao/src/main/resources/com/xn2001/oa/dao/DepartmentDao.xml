@@ -19,7 +19,7 @@
     </update>
 
     <delete id="delete" parameterType="String">
-        delete form department where sn=#{sn}
+        delete from department where sn =#{sn}
     </delete>
 
     <select id="select" parameterType="String" resultMap="department">
