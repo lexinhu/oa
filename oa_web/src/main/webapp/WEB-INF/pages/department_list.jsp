@@ -55,15 +55,15 @@
                             <td class="hidden-xs">
                                 <label class="option block mn">
                                     <input type="checkbox" name="mobileos" value="FR">
-                                    <span class="checkbox mn"></span>
+                                    <span class="checkbox mn" style="top: -6px;"></span>
                                 </label>
                             </td>
                             <td>${dept.sn}</td>
                             <td>${dept.name}</td>
                             <td>${dept.address}</td>
                             <td>
-                                <a href="/department/to_update?sn=${dept.sn}">编辑</a>
-                                <a href="/department/remove?sn=${dept.sn}">删除</a>
+                                <a href="/department/to_update/${dept.sn}">编辑</a>
+                                <a href="/department/remove/${dept.sn}">删除</a>
                             </td>
                         </tr>
                         </c:forEach>
