@@ -14,7 +14,7 @@ public class Contant {
     public static final String POST_GM = "总经理";
     public static final String POST_TREASURER = "财务";
 
-    public List<String> getPost() {
+    public static List<String> getPosts() {
         List<String> list = new ArrayList<>();
         list.add(POST_STAFF);
         list.add(POST_FM);

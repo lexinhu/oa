@@ -8,20 +8,20 @@
         <id property="sn" column="sn" javaType="String"/>
         <result property="password" column="password" javaType="String"/>
         <result property="name" column="name" javaType="String"/>
-        <result property="department_sn" column="department_sn" javaType="String"/>
+        <result property="departmentSn" column="department_sn" javaType="String"/>
         <result property="post" column="post" javaType="String"/>
-        <association property="department" column="department_sn" javaType="Department">
+        <association property="department" column="department_sn" javaType="Department" >
             <id property="sn" column="dsn" javaType="String"/>
             <result property="name" column="dname" javaType="String"/>
         </association>
     </resultMap>
 
     <insert id="insert" parameterType="Employee">
-        insert into employee values (#{sn},#{password},#{name},#{department},#{post})
+        insert into employee values (#{sn},#{password},#{name},#{departmentSn},#{post})
     </insert>
 
     <update id="update" parameterType="Employee">
-        update employee set name=#{name},password=#{password},department_sn=#{department_sn},post= #{post} where sn = #{sn}
+        update employee set name=#{name},password=#{password},department_sn=#{departmentSn},post= #{post} where sn = #{sn}
     </update>
 
     <delete id="delete" parameterType="String">
@@ -33,7 +33,7 @@
     </select>
 
     <select id="selectAll" resultMap="employee">
-        SELECT e.*,d.sn dsn,d.name dname FROM employee e LEFT JOIN department d ON e.department_sn=d.sn;
+        select e.*,d.sn dsn,d.name dname from employee e left join department d ON e.department_sn=d.sn;
     </select>
 
 </mapper>
