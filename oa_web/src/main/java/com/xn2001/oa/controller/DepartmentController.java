@@ -50,7 +50,7 @@ public class DepartmentController {
     @RequestMapping("/remove/{sn}")
     public String remove(@PathVariable String sn){
         departmentBiz.remove(sn);
-        return "redirect:list";
+        return "redirect:/department/list";
     }
 
 }
