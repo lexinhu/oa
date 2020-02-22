@@ -54,10 +54,9 @@
                             <td class="hidden-xs">
                                 <label class="option block mn">
                                     <input type="checkbox" name="mobileos" value="FR">
-                                    <span class="checkbox mn"></span>
-                                </label>
+                                    <span class="checkbox mn" style="top: -6px;"></span>                                </label>
                             </td>
-                            <td>${empl.sn}</td>
+                            <td>${empl.sn}</td>3
                             <td>${empl.name}</td>
                             <td class=" fw600">${empl.department.name}</td>
                             <td class="hidden-xs">

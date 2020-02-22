@@ -16,6 +16,7 @@ public class test1 {
 
     @Autowired
     DepartmentDao departmentDao;
+
     @Test
     public void test(){
         Department department = new Department();
