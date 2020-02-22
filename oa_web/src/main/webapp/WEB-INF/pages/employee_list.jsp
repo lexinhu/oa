@@ -59,12 +59,12 @@
                             </td>
                             <td>${empl.sn}</td>
                             <td>${empl.name}</td>
-                            <td class="text-center fw600">${empl.department.name}</td>
+                            <td class=" fw600">${empl.department.name}</td>
                             <td class="hidden-xs">
                                 <span class="badge badge-warning mr10 fs11">${empl.post}</span>
                             </td>
                             <td>
-                                <a href="/employee/to_update/sn=${empl.sn}">编辑</a>
+                                <a href="/employee/to_update/${empl.sn}">编辑</a>
                                 <a href="/employee/remove/${empl.sn}">删除</a>
                             </td>
                         </tr>

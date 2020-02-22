@@ -29,7 +29,8 @@ public class EmployeeController {
     }
 
     @RequestMapping("/to_add")
-    public String toAdd(Map<String,Object> map){
+    public String toAdd(Employee employee,Map<String,Object> map){
+        map.put("employee",employee);
         map.put("dlist",departmentBiz.getAll());
         map.put("plist", Contant.getPosts());
         return "employee_add";
@@ -43,9 +44,9 @@ public class EmployeeController {
 
     @RequestMapping("/to_update/{sn}")
     public String toUpdate(@PathVariable("sn") String sn, Map<String,Object> map){
+        map.put("employee",employeeBiz.get(sn));
         map.put("dlist",departmentBiz.getAll());
         map.put("plist", Contant.getPosts());
-        map.put("employee",employeeBiz.get(sn));
         return "employee_update";
     }
 
