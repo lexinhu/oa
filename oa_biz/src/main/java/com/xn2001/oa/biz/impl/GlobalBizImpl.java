@@ -4,10 +4,12 @@ import com.xn2001.oa.biz.GlobalBiz;
 import com.xn2001.oa.dao.EmployeeDao;
 import com.xn2001.oa.entity.Employee;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 /**
  * Created by 乐心湖 on 2020/2/22 23:10
  */
+@Service
 public class GlobalBizImpl implements GlobalBiz {
 
     @Autowired
