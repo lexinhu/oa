@@ -27,4 +27,6 @@ public class DealRecord {
     
     private String comment;
 
+    private Employee dealer;
+
 }

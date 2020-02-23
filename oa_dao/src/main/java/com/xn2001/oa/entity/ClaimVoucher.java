@@ -5,7 +5,7 @@ import lombok.Data;
 import java.util.Date;
 
 /**
- * (ClaimVoucherItem)表实体类
+ * (ClaimVoucher)表实体类
  *
  * @author 乐心湖
  * @since 2020-02-20 00:53:40
@@ -26,4 +26,9 @@ public class ClaimVoucher {
     private Object totalAmount;
 
     private String status;
+
+    private Employee creater;
+
+    private Employee dealer;
+
 }
