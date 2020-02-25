@@ -17,7 +17,7 @@ public class ClaimVoucherItem {
 
     private String item;
 
-    private Object amount;
+    private Double amount;
 
     private String comment;
 

@@ -1,6 +1,7 @@
 package com.xn2001.oa.entity;
 
 import lombok.Data;
+import org.springframework.format.annotation.DateTimeFormat;
 
 import java.util.Date;
 
@@ -19,6 +20,7 @@ public class ClaimVoucher {
 
     private String createSn;
 
+    @DateTimeFormat(pattern = "yyyy-MM-dd hh:mm")
     private Date createTime;
 
     private String nextDealSn;

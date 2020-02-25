@@ -1,6 +1,7 @@
 package com.xn2001.oa.entity;
 
 import lombok.Data;
+import org.springframework.format.annotation.DateTimeFormat;
 
 import java.util.Date;
 
@@ -18,7 +19,8 @@ public class DealRecord {
     private Integer claimVoucherId;
     
     private String dealSn;
-    
+
+    @DateTimeFormat(pattern = "yyyy-MM-dd hh:mm")
     private Date dealTime;
     
     private String dealWay;

@@ -15,7 +15,7 @@ public class Contant {
     public static final String POST_TREASURER = "财务";
 
     public static List<String> getPosts() {
-        List<String> list = new ArrayList<>();
+        List<String> list = new ArrayList<String>();
         list.add(POST_STAFF);
         list.add(POST_FM);
         list.add(POST_GM);
@@ -26,8 +26,8 @@ public class Contant {
     /**
      *  费用类别
      */
-    public List<String> getItems() {
-        List<String> list = new ArrayList<>();
+    public static List<String> getItems() {
+        List<String> list = new ArrayList<String>();
         list.add("交通");
         list.add("餐饮");
         list.add("住宿");

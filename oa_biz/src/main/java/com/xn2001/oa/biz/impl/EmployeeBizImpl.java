@@ -21,19 +21,19 @@ public class EmployeeBizImpl implements EmployeeBiz {
         employee.setPassword("000000");
         employeeDao.insert(employee);
     }
-
+    @Override
     public void edit(Employee employee) {
         employeeDao.update(employee);
     }
-
+    @Override
     public void remove(String sn) {
         employeeDao.delete(sn);
     }
-
+    @Override
     public Employee get(String sn) {
         return employeeDao.select(sn);
     }
-
+    @Override
     public List<Employee> getAll() {
         return employeeDao.selectAll();
     }
