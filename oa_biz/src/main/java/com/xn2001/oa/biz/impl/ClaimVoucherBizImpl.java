@@ -56,4 +56,15 @@ public class ClaimVoucherBizImpl implements ClaimVoucherBiz {
     public List<DealRecord> getRecords(int cvid) {
         return dealRecordDao.selectByClaimVoucher(cvid);
     }
+
+    @Override
+    public List<ClaimVoucher> getForSelf(String sn) {
+        return claimVoucherDao.selectByCreateSn(sn);
+    }
+
+    @Override
+    public List<ClaimVoucher> getForDeal(String sn) {
+        return claimVoucherDao.selectByNextDealSn(sn);
+    }
+
 }
