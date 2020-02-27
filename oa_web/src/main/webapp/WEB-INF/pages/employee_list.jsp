@@ -1,6 +1,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <jsp:include page="top.jsp"/>
+
 <section id="content" class="table-layout animated fadeIn">
     <div class="tray tray-center">
         <div class="content-header">
@@ -54,9 +55,10 @@
                             <td class="hidden-xs">
                                 <label class="option block mn">
                                     <input type="checkbox" name="mobileos" value="FR">
-                                    <span class="checkbox mn" style="top: -6px;"></span>                                </label>
+                                    <span class="checkbox mn" style="top: -6px;"></span>
+                                </label>
                             </td>
-                            <td>${empl.sn}</td>3
+                            <td>${empl.sn}</td>
                             <td>${empl.name}</td>
                             <td class=" fw600">${empl.department.name}</td>
                             <td class="hidden-xs">

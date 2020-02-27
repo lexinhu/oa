@@ -14,7 +14,7 @@ import java.util.Date;
 @Data
 public class ClaimVoucher {
 
-    private int id;
+    private Integer id;
 
     private String cause;
 
@@ -25,7 +25,7 @@ public class ClaimVoucher {
 
     private String nextDealSn;
 
-    private Object totalAmount;
+    private Double totalAmount;
 
     private String status;
 

@@ -119,4 +119,42 @@ public class ClaimVoucherBizImpl implements ClaimVoucherBiz {
         dealRecordDao.insert(dealRecord);
     }
 
+    @Override
+    public void deal(DealRecord dealRecord) {
+        ClaimVoucher claimVoucher = claimVoucherDao.select(dealRecord.getClaimVoucherId());
+        Employee employee = employeeDao.select(dealRecord.getDealSn());
+        dealRecord.setDealTime(new Date());
+        if(dealRecord.getDealWay().equals(Contant.DEAL_PASS)){
+            if(claimVoucher.getTotalAmount()<=Contant.LIMIT_CHECK || employee.getPost().equals(Contant.POST_GM)){
+                claimVoucher.setStatus(Contant.VOUCHER_APPROVED);
+                claimVoucher.setNextDealSn(employeeDao.selectByDepartmentAndPost(null,Contant.POST_TREASURER).get(0).getSn());
+
+                dealRecord.setDealResult(Contant.VOUCHER_APPROVED);
+            }else{
+                claimVoucher.setStatus(Contant.VOUCHER_RECHECK);
+                claimVoucher.setNextDealSn(employeeDao.selectByDepartmentAndPost(null,Contant.POST_GM).get(0).getSn());
+
+                dealRecord.setDealResult(Contant.VOUCHER_RECHECK);
+            }
+        }else if(dealRecord.getDealWay().equals(Contant.DEAL_BACK)){
+            claimVoucher.setStatus(Contant.VOUCHER_BACK);
+            claimVoucher.setNextDealSn(claimVoucher.getCreateSn());
+
+            dealRecord.setDealResult(Contant.VOUCHER_BACK);
+        }else if(dealRecord.getDealWay().equals(Contant.DEAL_REJECT)){
+            claimVoucher.setStatus(Contant.VOUCHER_END);
+            claimVoucher.setNextDealSn(null);
+
+            dealRecord.setDealResult(Contant.VOUCHER_END);
+        }else if(dealRecord.getDealWay().equals(Contant.DEAL_PAID)){
+            claimVoucher.setStatus(Contant.VOUCHER_PAID);
+            claimVoucher.setNextDealSn(null);
+
+            dealRecord.setDealResult(Contant.VOUCHER_PAID);
+        }
+
+        claimVoucherDao.update(claimVoucher);
+        dealRecordDao.insert(dealRecord);
+    }
+
 }

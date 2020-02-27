@@ -2,6 +2,7 @@ package com.xn2001.oa.controller;
 
 import com.xn2001.oa.biz.ClaimVoucherBiz;
 import com.xn2001.oa.dto.ClaimVoucherInfo;
+import com.xn2001.oa.entity.DealRecord;
 import com.xn2001.oa.entity.Employee;
 import com.xn2001.oa.global.Contant;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -82,5 +83,25 @@ public class ClaimVoucherController {
         claimVoucherBiz.submit(id);
         return "redirect:/claim_voucher/deal";
     }
+
+    @RequestMapping("/to_check/{id}")
+    public String toCheck(@PathVariable int id,Map<String,Object> map){
+        map.put("claimVoucher",claimVoucherBiz.get(id));
+        map.put("items",claimVoucherBiz.getItems(id));
+        map.put("records",claimVoucherBiz.getRecords(id));
+        DealRecord record = new DealRecord();
+        record.setClaimVoucherId(id);
+        map.put("record",record);
+        return "claim_voucher_check";
+    }
+
+    @RequestMapping("/check")
+    public String check(HttpSession session,DealRecord dealRecord){
+        Employee employee = (Employee) session.getAttribute("employee");
+        dealRecord.setDealSn(employee.getSn());
+        claimVoucherBiz.deal(dealRecord);
+        return "redirect:deal";
+    }
+
 
 }

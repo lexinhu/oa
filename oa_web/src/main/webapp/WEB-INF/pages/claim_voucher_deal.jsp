@@ -19,7 +19,7 @@
                                     <i class="fa fa-refresh"></i>
                                 </button>
                                 <button type="button" class="btn btn-default light">
-                                    <i class="fa fa-trash"></i>
+                                    <i class="fa fa-plus" onclick="javascript:window.location.href='/employee/to_add';"></i>
                                 </button>
                             </div>
                         </div>
@@ -70,10 +70,10 @@
                                         <a href="/claim_voucher/submit/${cv.id}">提交</a>
                                     </c:if>
                                     <c:if test="${cv.status==Contant.VOUCHER_SUBMIT || cv.status==Contant.VOUCHER_RECHECK}">
-                                        <a href="/claim_voucher/detail/${cv.id}">审核</a>
+                                        <a href="/claim_voucher/to_check/${cv.id}">审核</a>
                                     </c:if>
                                     <c:if test="${cv.status==Contant.VOUCHER_APPROVED }">
-                                        <a href="/claim_voucher/detail/${cv.id}">支付</a>
+                                        <a href="/claim_voucher/to_check/${cv.id}">支付</a>
                                     </c:if>
                                     <a href="/claim_voucher/detail/${cv.id}">详细信息</a>
                                 </td>
