@@ -14,7 +14,7 @@ import java.util.Date;
 @Data
 public class ClaimVoucher {
 
-    private Integer id;
+    private int id;
 
     private String cause;
 

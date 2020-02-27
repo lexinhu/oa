@@ -17,13 +17,16 @@
         values(#{claimVoucherId},#{item},#{amount},#{comment})
     </insert>
     <update id="update" parameterType="ClaimVoucherItem">
-        update  claim_voucher_item set claim_voucher_id=#{claimVoucherId},item=#{item},amount=#{amount},comment=#{comment}
+        update  claim_voucher_item
+        set claim_voucher_id=#{claimVoucherId},item=#{item},amount=#{amount},comment=#{comment}
         where id=#{id}
     </update>
     <delete id="delete" parameterType="Integer">
-        delete from claim_voucher_item where id=#{id}
+        delete from claim_voucher_item
+        where id=#{id}
     </delete>
     <select id="selectByClaimVoucher" resultMap="claim_voucher_item">
-        select * from claim_voucher_item where claim_voucher_id=#{cvid} order by id;
+        select * from claim_voucher_item
+        where claim_voucher_id=#{cvid} order by id;
     </select>
 </mapper>
