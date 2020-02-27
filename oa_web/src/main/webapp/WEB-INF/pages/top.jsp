@@ -16,7 +16,7 @@
 <div id="main">
     <header class="navbar navbar-fixed-top navbar-shadow">
         <div class="navbar-branding">
-            <a class="navbar-brand" href="dashboard.html">
+            <a class="navbar-brand" href="/">
                 <b>乐心湖</b>OA
             </a>
             <span id="toggle_sidemenu_l" class="ad ad-lines"></span>
