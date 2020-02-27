@@ -24,8 +24,8 @@
         <ul class="nav navbar-nav navbar-right">
             <li class="dropdown menu-merge">
                 <a href="#" class="dropdown-toggle fw600 p15" data-toggle="dropdown">
-                    <img src="/assets/img/avatars/5.jpg" alt="avatar" class="mw30 br64">
-                    <span class="hidden-xs pl15"> 刘备 </span>
+                    <img src="https://cdn.xn2001.com/img/head.jpg" alt="avatar" class="mw30 br64">
+                    <span class="hidden-xs pl15"> ${sessionScope.employee.name} </span>
                     <span class="caret caret-tp hidden-xs"></span>
                 </a>
                 <ul class="dropdown-menu list-group dropdown-persist w250" role="menu">
@@ -53,10 +53,10 @@
                 <div class="sidebar-widget author-widget">
                     <div class="media">
                         <a class="media-left" href="#">
-                            <img src="assets/img/avatars/3.jpg" class="img-responsive">
+                            <img src="https://cdn.xn2001.com/img/head.jpg" class="img-responsive">
                         </a>
                         <div class="media-body">
-                            <div class="media-author">刘备--总经理</div>
+                            <div class="media-author">${sessionScope.employee.name}---${sessionScope.employee.post}</div>
                             <div class="media-links">
                                 <a href="/quit">退出</a>
                             </div>

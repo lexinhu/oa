@@ -1,6 +1,7 @@
 package com.xn2001.oa.dao;
 
 import com.xn2001.oa.entity.Employee;
+import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
@@ -20,5 +21,7 @@ public interface EmployeeDao {
     Employee select(String sn);
 
     List<Employee> selectAll();
+
+    List<Employee> selectByDepartmentAndPost(@Param("dsn") String dsn, @Param("post") String post);
 
 }

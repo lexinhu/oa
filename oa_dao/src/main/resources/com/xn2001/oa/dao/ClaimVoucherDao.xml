@@ -26,12 +26,14 @@
         values(#{cause},#{createSn},#{createTime},#{nextDealSn},#{totalAmount},#{status})
     </insert>
     <update id="update" parameterType="ClaimVoucher">
-        update claim_voucher set cause=#{cause},next_deal_sn=#{nextDealSn},total_amount=#{totalAmount},status=#{status} where id=#{id}
+        update claim_voucher set
+        cause=#{cause},next_deal_sn=#{nextDealSn},total_amount=#{totalAmount},status=#{status}
+        where id=#{id}
     </update>
-    <delete id="delete" parameterType="Integer">
+    <delete id="delete">
         delete from claim_voucher where id=#{id}
     </delete>
-    <select id="select" resultMap="claimVoucher" parameterType="Integer">
+    <select id="select" resultMap="claimVoucher" >
         select cv.*,c.name cname,c.post cpost,d.name dname,d.post dpost
         from claim_voucher cv
         left join employee c on c.sn=cv.create_sn

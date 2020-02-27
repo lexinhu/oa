@@ -13,10 +13,9 @@
 
     <import resource="spring-biz.xml"/>
     <context:component-scan base-package="com.xn2001.oa.controller"/>
-
     <mvc:annotation-driven/>
-
     <mvc:default-servlet-handler/>
+
     <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
         <property name="viewClass" value="org.springframework.web.servlet.view.JstlView"/>
         <property name="prefix" value="/WEB-INF/pages/"/>
@@ -29,6 +28,4 @@
             <bean class="com.xn2001.oa.global.LoginInterceptor"/>
         </mvc:interceptor>
     </mvc:interceptors>
-
-
 </beans>

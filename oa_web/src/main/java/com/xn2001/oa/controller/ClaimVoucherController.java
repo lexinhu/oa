@@ -34,7 +34,7 @@ public class ClaimVoucherController {
         Employee employee = (Employee)session.getAttribute("employee");
         info.getClaimVoucher().setCreateSn(employee.getSn());
         claimVoucherBiz.save(info.getClaimVoucher(),info.getItems());
-        return "redirect:detail/" + info.getClaimVoucher().getId();
+        return "redirect:deal";
     }
 
     @RequestMapping("/detail/{id}")
@@ -57,6 +57,30 @@ public class ClaimVoucherController {
         Employee employee = (Employee) session.getAttribute("employee");
         map.put("list",claimVoucherBiz.getForDeal(employee.getSn()));
         return "claim_voucher_deal";
+    }
+
+    @RequestMapping("/to_update/{id}")
+    public String toUpdate(@PathVariable("id") int id,Map<String,Object> map){
+        map.put("items", Contant.getItems());
+        ClaimVoucherInfo info =new ClaimVoucherInfo();
+        info.setClaimVoucher(claimVoucherBiz.get(id));
+        info.setItems(claimVoucherBiz.getItems(id));
+        map.put("info",info);
+        return "claim_voucher_update";
+    }
+
+    @RequestMapping("/update")
+    public String update(HttpSession session, ClaimVoucherInfo info){
+        Employee employee = (Employee)session.getAttribute("employee");
+        info.getClaimVoucher().setCreateSn(employee.getSn());
+        claimVoucherBiz.update(info.getClaimVoucher(),info.getItems());
+        return "redirect:deal";
+    }
+
+    @RequestMapping("/submit/{id}")
+    public String submit(@PathVariable int id){
+        claimVoucherBiz.submit(id);
+        return "redirect:/claim_voucher/deal";
     }
 
 }

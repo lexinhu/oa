@@ -63,7 +63,7 @@
                             <td class="hidden-xs">
                                 <span class="badge badge-warning mr10 fs11">${cv.status}</span>
                             </td>
-                            <td>${cv.id}</td>
+                            <td>${cv.creater.name}</td>
                             <td class="fw600">${cv.totalAmount}</td>
                             <td><spring:eval expression="cv.createTime"/> </td>
                             <td><a href="/claim_voucher/detail/${cv.id}">详细信息</a></td>
