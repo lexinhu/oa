@@ -1,30 +1,36 @@
-# oa
+# oa企业报销系统
 
 #### 介绍
 一款由SSM开发的企业报销系统
 
 #### 软件架构
-软件架构说明
-
+##### 三层架构
+- 持久层--Mybatis 
+- 表现层--Spring MVC 
+- 控制器--Spring Controller
+##### 基于MVC模式
+- 视图--Jsp 
+- 模型--JavaBean  
+- 业务层--JavaBean
+##### 主要技术 
+- Spring Ioc 
+- Mybatis+Spring整合 
+- 声明式事务 
+- Spring 标签库 
+- Spring拦截器
 
 #### 安装教程
 
-1.  xxxx
-2.  xxxx
-3.  xxxx
+1.  导入sql
+2.  修改spring-dao.xml中的数据库连接
 
 #### 使用说明
 
-1.  xxxx
-2.  xxxx
-3.  xxxx
+默认用户里有四个，分别对应10001（总经理）,10002（部门经理）,10003（财务）,10004（普通员工）
+密码为000000
+员工填写报销单后需要提交给部门经理审核，再由财务支付，
+如果金额大于5000，还需要总经理审核。
+
+业务代码逻辑清晰易理解，同时十分方便后期修改和增强。
 
 
-#### 码云特技
-
-1.  使用 Readme\_XXX.md 来支持不同的语言，例如 Readme\_en.md, Readme\_zh.md
-2.  码云官方博客 [blog.gitee.com](https://blog.gitee.com)
-3.  你可以 [https://gitee.com/explore](https://gitee.com/explore) 这个地址来了解码云上的优秀开源项目
-4.  [GVP](https://gitee.com/gvp) 全称是码云最有价值开源项目，是码云综合评定出的优秀开源项目
-5.  码云官方提供的使用手册 [https://gitee.com/help](https://gitee.com/help)
-6.  码云封面人物是一档用来展示码云会员风采的栏目 [https://gitee.com/gitee-stars/](https://gitee.com/gitee-stars/)
