@@ -6,6 +6,7 @@
 
     <groupId>com.xn2001</groupId>
     <artifactId>oa</artifactId>
+<!--    <packaging>pom</packaging>-->
     <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
     <modules>
