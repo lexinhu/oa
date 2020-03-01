@@ -16,7 +16,7 @@
 - Spring Ioc 
 - Mybatis+Spring整合 
 - 声明式事务 
-- Spring 标签库 
+- Spring标签库 
 - Spring拦截器
 
 #### 安装教程
